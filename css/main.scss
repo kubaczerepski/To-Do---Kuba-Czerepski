@@ -1,0 +1,144 @@
+@import "./variables";
+@font-face {
+    font-family: 'League Spartan';
+    src: local("League Spartan"), local("League Spartan"), url("../LeagueSpartan-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+*{
+    scroll-behavior: smooth;
+    background-color: $baseColor;
+    font-family:"League Spartan";
+    color: $accentColor;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    header{
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.02), 
+        0 2px 4px rgba(0,0,0,0.02), 
+        0 4px 8px rgba(0,0,0,0.02), 
+        0 8px 16px rgba(0,0,0,0.02),
+        0 16px 32px rgba(0,0,0,0.02), 
+        0 32px 64px rgba(0,0,0,0.02);
+    }
+    .heading_section{
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+    .note_section{
+        position: relative;
+        display: flex;
+        min-height: 65vh;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 1em 1em;
+
+        .note_adder{
+            position: absolute;
+            top: 0;
+            input{
+                box-shadow: 0 1px 2px rgba(0,0,0,0.02), 
+                0 2px 4px rgba(0,0,0,0.02), 
+                0 4px 8px rgba(0,0,0,0.02), 
+                0 8px 16px rgba(0,0,0,0.02),
+                0 16px 32px rgba(0,0,0,0.02), 
+                0 32px 64px rgba(0,0,0,0.02);
+                outline: none;
+            }
+            .note_add_button{
+                font-size: small;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+        .note_space{
+            position: absolute;
+            height: fit-content;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 1em 0.5em;
+            .note{
+                display: flex;
+                width: 100vw;
+                height: fit-content;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+                border-radius: 16px;
+                justify-content: center;
+                align-items: center;
+                padding: 1em 0em;
+                margin-top: 10px;
+                cursor: pointer;
+                outline: none;
+                #note_delete{
+                    display: flex;
+                    padding: 0em 0.5em;
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        i{
+            cursor: pointer;
+            padding: 0em 1em;
+        }
+    }
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: $baseColor;
+}
+
+::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: $accentColor;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: $accentColor;
+}
+@media (min-width: 768px) {
+    .note{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.02), 
+        0 2px 4px rgba(0,0,0,0.02), 
+        0 4px 8px rgba(0,0,0,0.02), 
+        0 8px 16px rgba(0,0,0,0.02),
+        0 16px 32px rgba(0,0,0,0.02), 
+        0 32px 64px rgba(0,0,0,0.02);
+    }
+}
